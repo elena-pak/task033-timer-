@@ -1,19 +1,20 @@
 var gameStop = false 
-var points = 0 
+var points = document.getElementById("score")
+points = 0
 
 document.addEventListener("DOMContentLoaded", main)
 
-function main(){
-    document.addEventListener("keydown", go)
+function main () {
+    document.addEventListener("keydown", go)    
 }
 
-function go(event){
+function go (event) {
     let dino = document.querySelector(".gamer")
     let x = parseInt(dino.style.left)
-    let y = parseInt(window.getComputedStyle(dino).top)
+    let y = parseInt(window.getComputedStyle(dino).top)    
 
-    x = !x ? 50 : x
-    
+    x = !x ? 50 : x 
+
     if (event.code === "ArrowRight") {
         dino.style.transform = "scaleX(1)"
         x += 20
@@ -30,7 +31,9 @@ function go(event){
 
     dino.style.left = `${x}px`
 
+   
     setTimeout(() => checkStop(), 310)
+    
 }
 
 function checkStop() {
@@ -60,6 +63,8 @@ function checkStop() {
     let x4 = x1 + tw
     let y4 = y1 + th
 
+    
+    
     if (handX > x1 && handX < x2 && handY < y3 && handY > y1) {
         setTimeout(() => {
             alert("GAME OVER!")
@@ -68,7 +73,8 @@ function checkStop() {
     }
 
     if (!gameStop && handX > x1) {
-        points++
+        
+    
+    points.innerHTML = points++
     }
-    console.log(points)
 }

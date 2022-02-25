@@ -10,20 +10,20 @@
     height: 100vh;
 }
 
-.air{
+.air {
     width: 100%;
     height: 70%;
 }
 
-.earth{
+.earth {
     background-color: darkgreen;
     width: 100%;
     height: 30%;
 }
 
-.gamer{
+.gamer {
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 50px;
     transition: 0.3s;
 }
