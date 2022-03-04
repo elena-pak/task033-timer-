@@ -73,7 +73,8 @@ function checkStop() {
     }
 
     if (!gameStop && handX > x1) {
-
+        
+    
     points.innerHTML = points++
     }
 }
